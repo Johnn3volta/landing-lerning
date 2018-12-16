@@ -32,7 +32,7 @@ gulp.task('styles:compile', function () {
     return gulp.src('source/styles/main.scss')
         .pipe(sass({outputStyle: 'compressed'}).on('error', sass.logError))
         .pipe(autoprefixer({
-            browsers: ['last 5 versions'],
+            browsers: ['last 15 versions'],
             cascade: false
         }))
         .pipe(rename('main.min.css'))
