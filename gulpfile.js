@@ -29,7 +29,7 @@ gulp.task('templates:compile', function buildHTML() {
 
 /* -------- Styles Compile ---------*/
 gulp.task('styles:compile', function () {
-    return gulp.src('source/styles/main.sass')
+    return gulp.src('source/styles/main.scss')
         .pipe(sass({outputStyle: 'compressed'}).on('error', sass.logError))
         .pipe(autoprefixer({
             browsers: ['last 5 versions'],
@@ -74,7 +74,7 @@ gulp.task('copy', gulp.parallel('copy:fonts', 'copy:images'));
 /* -------- Watchers  ---------*/
 gulp.task('watch', function () {
     gulp.watch('./source/templates/**/*.pug', gulp.series('templates:compile'));
-    gulp.watch('./source/styles/**/*.sass', gulp.series('styles:compile'));
+    gulp.watch('./source/styles/**/*.scss', gulp.series('styles:compile'));
 });
 
 /* -------- Watchers  ---------*/
