@@ -1,10 +1,9 @@
 (function(){
-  var me = {},
-    form = document.querySelector('.form-container'),
-    closeButton = null;
+  var me          = {},
+      form        = document.querySelector('.form-container'),
+      closeButton = null;
 
-  function onClose(e)
-  {
+  function onClose(e){
     e.preventDefault();
 
     me.close();

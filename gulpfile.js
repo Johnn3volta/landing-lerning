@@ -1,14 +1,14 @@
-const gulp = require('gulp');
-const browserSync = require('browser-sync').create();
-const pug = require('gulp-pug');
-const sass = require('gulp-sass');
-const spritesmith = require('gulp.spritesmith');
-const rimraf = require('rimraf');
-const rename = require('gulp-rename');
-const uglify = require('gulp-uglify');
-const concat = require('gulp-concat');
-const autoprefixer = require('gulp-autoprefixer');
-const sourcemaps = require('gulp-sourcemaps');
+const gulp         = require('gulp'),
+      browserSync  = require('browser-sync').create(),
+      pug          = require('gulp-pug'),
+      sass         = require('gulp-sass'),
+      spritesmith  = require('gulp.spritesmith'),
+      rimraf       = require('rimraf'),
+      rename       = require('gulp-rename'),
+      uglify       = require('gulp-uglify'),
+      concat       = require('gulp-concat'),
+      autoprefixer = require('gulp-autoprefixer'),
+      sourcemaps   = require('gulp-sourcemaps');
 
 /* -------- Server ---------*/
 gulp.task('server', function(){
@@ -46,6 +46,7 @@ gulp.task('styles:compile', function(){
 gulp.task('js', function(){
   return gulp.src([
     './source/js/init.js',
+    './source/js/navigation.js',
     './source/js/validation.js',
     './source/js/form.js',
     './source/js/main.js',

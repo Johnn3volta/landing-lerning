@@ -2,8 +2,9 @@
 
   // Add vent listener for open from button
 
-  var openFormButton = document.querySelector('.arrow-down');
-  var form = document.querySelector('.form');
+  var openFormButton = document.querySelector('.arrow-down'),
+      form           = document.querySelector('.form'),
+      nav            = document.querySelector('.nav');
 
   if (openFormButton){
     openFormButton.addEventListener('click', function(e){
@@ -21,6 +22,20 @@
         console.log('Warning');
       }
     });
+  }
+
+  if (nav){
+    nav.addEventListener('click', function(e){
+      var target = e.target;
+
+      if (target.tagName.toLowerCase() !== 'a'){
+        return;
+      }
+      e.preventDefault();
+
+      ITVDN.navigation.toggleToActiveLink(target);
+    });
+
   }
 
 }());
